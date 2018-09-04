@@ -15,6 +15,7 @@ namespace DocumentationCommentAndNaming.ConsoleApp.Example
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!");
         }
     }
 }
