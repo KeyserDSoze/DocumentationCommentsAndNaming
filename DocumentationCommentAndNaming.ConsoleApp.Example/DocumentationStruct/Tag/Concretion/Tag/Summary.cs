@@ -12,10 +12,15 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
     {
         public Summary() : base("summary")
         {
+            this.sizeTitle = 15;
+            this.sizeDescription = 14;
+            this.colorTitle = Color.DarkOrange;
+            this.colorDescription = Color.DarkGray;
+
         }
         public override void WriteParagraph(ref DocX docX)
         {
-            docX.InsertParagraph($"Summary: ", false, new Formatting() { Size = 14, UnderlineStyle = UnderlineStyle.singleLine, UnderlineColor = Color.OrangeRed, Bold = true });
+            docX.InsertParagraph($"Summary: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true });
             string value = "";
             foreach (var subTag in this.Tags)
             {
@@ -25,7 +30,7 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
                     value += " " + regexWhiteSpace.Replace(paramTag.Value, "").Trim();
                 }
             }
-            docX.InsertParagraph(value.Trim(), false, new Formatting() { Size = 14, FontColor = Color.Black });
+            docX.InsertParagraph(value.Trim(), false, new Formatting() { Size = this.sizeDescription, FontColor = this.colorDescription });
         }
     }
 }

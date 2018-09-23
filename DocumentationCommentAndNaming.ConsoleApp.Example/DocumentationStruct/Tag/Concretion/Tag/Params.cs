@@ -12,16 +12,18 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
     {
         public Params() : base("params")
         {
+            this.colorDescription = Color.DarkGray;
+            this.colorTitle = Color.DarkBlue;
         }
         public override void WriteParagraph(ref DocX docX)
         {
-            docX.InsertParagraph($"Parameters: ", false, new Formatting() { Size = 13, UnderlineStyle = UnderlineStyle.singleLine, UnderlineColor = Color.OrangeRed, Bold = true });
+            docX.InsertParagraph($"Parameters: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true });
             foreach (var subTag in this.Tags)
             {
                 int tot = 0;
                 foreach (var paramTag in subTag.Tags)
                 {
-                    docX.InsertParagraph("Param {" + subTag.Attributes.ElementAt(tot).Value + "} is: " + $"{regexWhiteSpace.Replace(paramTag.Value, "")}", false, new Formatting() { Size = 13, FontColor = Color.DarkGray });
+                    docX.InsertParagraph("Param {" + subTag.Attributes.ElementAt(tot).Value + "} is: " + $"{regexWhiteSpace.Replace(paramTag.Value, "")}", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorDescription });
                     tot++;
                 }
             }

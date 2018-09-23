@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Dynamic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,10 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
         public Dictionary<string, string> Attributes = new Dictionary<string, string>();
         public List<ASubTag> Tags = new List<ASubTag>();
         public string Value { get; set; }
+        protected Color colorTitle = Color.Black;
+        protected Color colorDescription = Color.Black;
+        protected int sizeTitle = 14;
+        protected int sizeDescription = 13;
         private string Tag;
         public ATag(string tag, params string[] attributes)
         {

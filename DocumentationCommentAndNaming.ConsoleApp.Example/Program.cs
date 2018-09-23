@@ -12,9 +12,8 @@ namespace DocumentationCommentAndNaming.ConsoleApp.Example
     {
         static void Main(string[] args)
         {
-            DocumentCreator documentCreator = new DocumentCreator(@"C:\Users\aless\source\repos\DocumentationCommentsAndNaming");
             WordDocument wordDocument = new WordDocument();
-            wordDocument.CreateDocument(documentCreator);
+            wordDocument.CreateDocument(@"C:\Users\aless\source\repos\DocumentationCommentsAndNaming");
         }
     }
 }
