@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocumentationCommentAndNaming.Library.Database
+namespace DocumentationCommentsAndNaming.Library.Database
 {
     /// <summary>
     /// The main <c>CustomerBase</c> class contains all methods
     /// to get and manage User
+    /// </summary>
     /// <list type="bullet">
     /// <item>
     /// <term>Get</term>
@@ -23,7 +24,6 @@ namespace DocumentationCommentAndNaming.Library.Database
     /// <para>This class manages user in DB.</para>
     /// <para>These operations can be performed everytime you want.</para>
     /// </remarks>
-    /// </summary>
     /// <example>
     /// <code>
     /// CustomerBase customerBase = new CustomerBase();
@@ -40,9 +40,13 @@ namespace DocumentationCommentAndNaming.Library.Database
         /// <returns>
         /// Nothing but populate this class.
         /// </returns>
+        /// <exceptions>
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
+        /// </exceptions>
+        /// <remarks>
         /// See <see cref="Get()"/> to perform a retrieve.
         /// <seealso cref="Update()"/>
+        /// </remarks>
         public void Get()
         {
             this.UserId = 1;
@@ -53,9 +57,13 @@ namespace DocumentationCommentAndNaming.Library.Database
         /// <returns>
         /// Nothing.
         /// </returns>
+        /// <exceptions>
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
+        /// </exceptions>
+        /// <remarks>
         /// See <see cref="Update()"/> to perform an update on DB.
         /// <seealso cref="Get()"/>
+        /// </remarks>
         public void Update()
         {
             Console.WriteLine("Save in DB");

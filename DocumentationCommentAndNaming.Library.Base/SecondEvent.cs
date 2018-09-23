@@ -1,12 +1,13 @@
-﻿using System;
+﻿using DocumentationCommentsAndNaming.Library.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocumentationCommentsAndNaming.Library.Base
+namespace DocumentationCommentsAndNaming.Library.Base2
 {
-    ///<priority>1</priority>
+    ///<priority>2</priority>
     /// <summary>
     /// The main <c>Event</c> class contains all methods
     /// for performing basic subscription events.
@@ -42,31 +43,8 @@ namespace DocumentationCommentsAndNaming.Library.Base
     /// event.Unsubscribe(1);
     /// </code>
     /// </example>
-    public class Event
+    public class SecondEvent
     {
-        /// <summary>
-        /// The A string that repesents a string parameter.
-        /// </summary>
-        public string A { get; set; }
-        /// <summary>
-        /// The B string that represents a string field.
-        /// </summary>
-        public string B;
-        /// <summary>
-        /// The delegate.
-        /// </summary>
-        /// <params>
-        /// <param name="x">X means something.</param>
-        /// </params>
-        public delegate void ADelegate(int x);
-        /// <summary>
-        /// Delegation as event.
-        /// </summary>
-        public event ADelegate aDelegate;
-        /// <summary>
-        /// Delegation as delegation.
-        /// </summary>
-        public ADelegate aDelegate2;
         /// <summary>
         /// Pass an integer as <paramref name="userId"/> and returns the result of subscription.
         /// </summary>
@@ -80,10 +58,10 @@ namespace DocumentationCommentsAndNaming.Library.Base
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
         /// </exceptions>
         /// <remarks>
-        /// See <see cref="Subscribe(int)"/> to perform a subscription.
-        /// <seealso cref="Unsubscribe(int)"/>
-        /// <seealso cref="Bill(int, float)"/>
-        /// <seealso cref="Notify(int, string)"/>
+        /// See <see cref="Event.Subscribe(int)"/> to perform a subscription.
+        /// <seealso cref="Event.Unsubscribe(int)"/>
+        /// <seealso cref="Event.Bill(int, float)"/>
+        /// <seealso cref="Event.Notify(int, string)"/>
         /// </remarks>
         public int Subscribe(int userId) { return 3; }
         /// <summary>
@@ -94,16 +72,15 @@ namespace DocumentationCommentsAndNaming.Library.Base
         /// </returns>
         /// <params>
         /// <param name="userId">Id of CustomerBase to recognize the user.</param>
-        /// <paramref name="userId">Id of CustomerBase.</paramref>
         /// </params>
         /// <exceptions>
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
         /// </exceptions>
         /// <remarks>
-        /// See <see cref="Unsubscribe(int)"/> to perform an unsubscription.
-        /// <seealso cref="Subscribe(int)"/>
-        /// <seealso cref="Bill(int, float)"/>
-        /// <seealso cref="Notify(int, string)"/>
+        /// See <see cref="Event.Unsubscribe(int)"/> to perform an unsubscription.
+        /// <seealso cref="Event.Subscribe(int)"/>
+        /// <seealso cref="Event.Bill(int, float)"/>
+        /// <seealso cref="Event.Notify(int, string)"/>
         /// </remarks>
         public void Unsubscribe(int userId) { }
         /// <summary>
@@ -120,10 +97,10 @@ namespace DocumentationCommentsAndNaming.Library.Base
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
         /// </exceptions>
         /// <remarks>
-        /// See <see cref="Bill(int, float)"/> to perform an unsubscription.
-        /// <seealso cref="Subscribe(int)"/>
-        /// <seealso cref="Unsubscribe(int)"/>
-        /// <seealso cref="Notify(int, string)"/>
+        /// See <see cref="Event.Bill(int, float)"/> to perform an unsubscription.
+        /// <seealso cref="Event.Subscribe(int)"/>
+        /// <seealso cref="Event.Unsubscribe(int)"/>
+        /// <seealso cref="Event.Notify(int, string)"/>
         /// </remarks>
         public bool Bill(int userId, float price) { return true; }
         /// <summary>
@@ -140,10 +117,10 @@ namespace DocumentationCommentsAndNaming.Library.Base
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>
         /// </exceptions>
         /// <remarks>
-        /// See <see cref="Notify(int, string)"/> to perform a notification.
-        /// <seealso cref="Subscribe(int)"/>
-        /// <seealso cref="Bill(int, float)"/>
-        /// <seealso cref="Unsubscribe(int)"/>
+        /// See <see cref="Event.Notify(int, string)"/> to perform a notification.
+        /// <seealso cref="Event.Subscribe(int)"/>
+        /// <seealso cref="Event.Bill(int, float)"/>
+        /// <seealso cref="Event.Unsubscribe(int)"/>
         /// </remarks>
         public bool Notify(int userId, string message) { return true; }
     }

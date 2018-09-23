@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BDCF13E2-95B4-40A1-9970-693B675A6E0A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DocumentationCommentAndNaming</RootNamespace>
+    <AssemblyName>DocumentationCommentAndNaming</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Words.NET, Version=1.2.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.2.1\lib\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocumentationStruct\Assembly.cs" />
+    <Compile Include="DocumentationStruct\Documentation.cs" />
+    <Compile Include="WordCreator\DocumentCreator.cs" />
+    <Compile Include="DocumentationStruct\MemberFactory.cs" />
+    <Compile Include="DocumentationStruct\Member\Abstraction\AMember.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\Event.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\NullMember.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\Property.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\Field.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\Method.cs" />
+    <Compile Include="DocumentationStruct\Member\Concretion\Type.cs" />
+    <Compile Include="DocumentationStruct\Tag\Abstraction\ATag.cs" />
+    <Compile Include="DocumentationStruct\Tag\Abstraction\ASubTag.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Exception.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Item.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Priority.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\List.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\NullSubTag .cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\NullTag.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Params.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Value.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\TypeParamRef.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\TypeParam.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Summary.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\SeeAlso.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\See.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Returns.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Remarks.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Permission.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Paramref.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Param.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Para.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Exceptions.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\Tag\Example.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Code.cs" />
+    <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\C.cs" />
+    <Compile Include="DocumentationStruct\TagFactory.cs" />
+    <Compile Include="ParserXml.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordCreator\WordDocument.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

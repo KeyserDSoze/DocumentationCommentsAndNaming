@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentAndNaming.ConsoleApp.Example", "DocumentationCommentAndNaming.ConsoleApp.Example\DocumentationCommentAndNaming.ConsoleApp.Example.csproj", "{BDCF13E2-95B4-40A1-9970-693B675A6E0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentsAndNaming.ConsoleApp.Example", "DocumentationCommentAndNaming.ConsoleApp.Example\DocumentationCommentsAndNaming.ConsoleApp.Example.csproj", "{BDCF13E2-95B4-40A1-9970-693B675A6E0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentAndNaming.Library.Base", "DocumentationCommentAndNaming.Library.Base\DocumentationCommentAndNaming.Library.Base.csproj", "{892A6847-9310-4FBC-9BFA-549A18A8D0F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentsAndNaming.Library.Base", "DocumentationCommentAndNaming.Library.Base\DocumentationCommentsAndNaming.Library.Base.csproj", "{892A6847-9310-4FBC-9BFA-549A18A8D0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentAndNaming.Library.Database", "DocumentationCommentAndNaming.Library.Database\DocumentationCommentAndNaming.Library.Database.csproj", "{516264A2-C15C-4073-BB9E-1003E64D98AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentsAndNaming.Library.Database", "DocumentationCommentAndNaming.Library.Database\DocumentationCommentsAndNaming.Library.Database.csproj", "{516264A2-C15C-4073-BB9E-1003E64D98AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentAndNaming.WebApp.Api", "DocumentationCommentAndNaming.WebApp.Api\DocumentationCommentAndNaming.WebApp.Api.csproj", "{0049B57F-C660-42D1-BDD0-B6291C0F6548}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentsAndNaming.WebApp.Api", "DocumentationCommentAndNaming.WebApp.Api\DocumentationCommentsAndNaming.WebApp.Api.csproj", "{0049B57F-C660-42D1-BDD0-B6291C0F6548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentAndNaming.WebApp.BackOffice", "DocumentationCommentAndNaming.WebApp.BackOffice\DocumentationCommentAndNaming.WebApp.BackOffice.csproj", "{1D0DEBB9-6329-4621-AEF7-273CC35DEC32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentationCommentsAndNaming.WebApp.BackOffice", "DocumentationCommentAndNaming.WebApp.BackOffice\DocumentationCommentsAndNaming.WebApp.BackOffice.csproj", "{1D0DEBB9-6329-4621-AEF7-273CC35DEC32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
