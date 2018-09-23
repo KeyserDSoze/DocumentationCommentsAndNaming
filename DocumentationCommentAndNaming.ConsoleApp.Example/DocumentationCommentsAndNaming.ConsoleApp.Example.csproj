@@ -84,7 +84,6 @@
     <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\Code.cs" />
     <Compile Include="DocumentationStruct\Tag\Concretion\SubTag\C.cs" />
     <Compile Include="DocumentationStruct\TagFactory.cs" />
-    <Compile Include="ParserXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WordCreator\WordDocument.cs" />
