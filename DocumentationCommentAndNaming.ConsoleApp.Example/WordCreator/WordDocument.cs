@@ -31,8 +31,10 @@ namespace DocumentationCommentAndNaming.WordCreator
                 int subCapitol = 1;
                 foreach (KeyValuePair<string, Assembly> assembly in documentation.Pages.OrderBy(x => x.Value.Members.OrderBy(y => y.Priority).First().Priority))
                 {
-                    doc.InsertParagraph($"{capitol}.{subCapitol} - {assembly.Value.Members.First().Name}", false, new Formatting() { Size = 20 });
-                    doc.InsertParagraph($"Namespace: {assembly.Value.Name}", false, new Formatting() { Size = 14, FontColor = Color.DarkGray });
+                    Paragraph paragraph = doc.InsertParagraph($"{capitol}.{subCapitol} - {assembly.Value.Members.First().Name}", false, new Formatting() { Size = 20 });
+                    paragraph.IndentationBefore = 0.2f;
+                    paragraph = doc.InsertParagraph($"Namespace: {assembly.Value.Name}", false, new Formatting() { Size = 14, FontColor = Color.DarkGray });
+                    paragraph.IndentationBefore = 0.4f;
                     foreach (AMember member in assembly.Value.Members.OrderBy(x => x.Priority)) WriteMember(member, false);
                     doc.InsertParagraph(" ", false, new Formatting() { Size = 24 });
                     subCapitol++;
@@ -44,8 +46,16 @@ namespace DocumentationCommentAndNaming.WordCreator
         }
         public void WriteMember(AMember member, bool inner)
         {
-            if (inner) doc.InsertParagraph($"{member.GetType().Name}: {member.Name}", false, new Formatting() { Size = 18 });
-            if (!string.IsNullOrWhiteSpace(member.ReturnValue)) doc.InsertParagraph($"Return values: {member.ReturnValue}", false, new Formatting() { Size = 12, FontColor = Color.DarkViolet });
+            if (inner)
+            {
+                Paragraph paragraph = doc.InsertParagraph($"{member.GetType().Name}: {member.Name}", false, new Formatting() { Size = 18 });
+                paragraph.IndentationBefore = 0.6f;
+            }
+            if (!string.IsNullOrWhiteSpace(member.ReturnValue))
+            {
+                Paragraph paragraph = doc.InsertParagraph($"Return values: {member.ReturnValue}", false, new Formatting() { Size = 14, FontColor = Color.DarkGray });
+                paragraph.IndentationBefore = 0.8f;
+            }
             foreach (ATag tag in member.Tags)
             {
                 tag.WriteParagraph(ref doc);

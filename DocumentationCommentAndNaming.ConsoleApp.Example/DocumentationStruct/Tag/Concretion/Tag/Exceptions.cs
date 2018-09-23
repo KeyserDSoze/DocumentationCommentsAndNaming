@@ -17,13 +17,15 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
         }
         public override void WriteParagraph(ref DocX docX)
         {
-            docX.InsertParagraph($"Possible exceptions: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true});
+            Paragraph paragraph = docX.InsertParagraph($"Possible exceptions: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true});
+            paragraph.IndentationBefore = this.Indentation;
             foreach (var subTag in this.Tags)
             {
                 int tot = 0;
                 foreach (var exceptionTag in subTag.Tags)
                 {
-                    docX.InsertParagraph($"{regexWhiteSpace.Replace(exceptionTag.Value, "")} - ({subTag.Attributes.ElementAt(tot).Value.Split(':').Last()})", false, new Formatting() { Size = this.sizeDescription, FontColor = this.colorDescription });
+                    paragraph = docX.InsertParagraph($"{regexWhiteSpace.Replace(exceptionTag.Value, "")} - ({subTag.Attributes.ElementAt(tot).Value.Split(':').Last()})", false, new Formatting() { Size = this.sizeDescription, FontColor = this.colorDescription });
+                    paragraph.IndentationBefore = this.Indentation;
                     tot++;
                 }
             }

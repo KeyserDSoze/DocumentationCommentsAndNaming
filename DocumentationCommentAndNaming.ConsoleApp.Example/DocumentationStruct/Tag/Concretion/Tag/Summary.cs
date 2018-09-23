@@ -14,13 +14,14 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
         {
             this.sizeTitle = 15;
             this.sizeDescription = 14;
-            this.colorTitle = Color.DarkOrange;
+            this.colorTitle = Color.DarkViolet;
             this.colorDescription = Color.DarkGray;
 
         }
         public override void WriteParagraph(ref DocX docX)
         {
-            docX.InsertParagraph($"Summary: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true });
+            Paragraph paragraph = docX.InsertParagraph($"Summary: ", false, new Formatting() { Size = this.sizeTitle, FontColor = this.colorTitle, Bold = true });
+            paragraph.IndentationBefore = this.Indentation;
             string value = "";
             foreach (var subTag in this.Tags)
             {
@@ -30,7 +31,8 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
                     value += " " + regexWhiteSpace.Replace(paramTag.Value, "").Trim();
                 }
             }
-            docX.InsertParagraph(value.Trim(), false, new Formatting() { Size = this.sizeDescription, FontColor = this.colorDescription });
+            paragraph = docX.InsertParagraph(value.Trim(), false, new Formatting() { Size = this.sizeDescription, FontColor = this.colorDescription });
+            paragraph.IndentationBefore = this.Indentation;
         }
     }
 }

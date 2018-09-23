@@ -8,8 +8,7 @@ namespace DocumentationCommentsAndNaming.Library.Base
 {
     ///<priority>1</priority>
     /// <summary>
-    /// The main <c>Event</c> class contains all methods
-    /// for performing basic subscription events.
+    /// The main <c>Event</c> class contains all methods for performing basic subscription events.
     /// </summary>
     /// <list type="bullet">
     /// <item>
@@ -94,7 +93,6 @@ namespace DocumentationCommentsAndNaming.Library.Base
         /// </returns>
         /// <params>
         /// <param name="userId">Id of CustomerBase to recognize the user.</param>
-        /// <paramref name="userId">Id of CustomerBase.</paramref>
         /// </params>
         /// <exceptions>
         /// <exception cref="System.Exception">Thrown when one parameter is null or zero.</exception>

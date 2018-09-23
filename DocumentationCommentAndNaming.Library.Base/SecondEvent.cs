@@ -9,7 +9,7 @@ namespace DocumentationCommentsAndNaming.Library.Base2
 {
     ///<priority>2</priority>
     /// <summary>
-    /// The main <c>Event</c> class contains all methods
+    /// The main <c>Event</c> class contains all methods 
     /// for performing basic subscription events.
     /// </summary>
     /// <list type="bullet">

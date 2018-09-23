@@ -22,6 +22,7 @@ namespace DocumentationCommentAndNaming.DocumentationStruct.Tag
         protected int sizeTitle = 14;
         protected int sizeDescription = 13;
         private string Tag;
+        protected float Indentation = 1.2f;
         public ATag(string tag, params string[] attributes)
         {
             this.Tag = tag;
